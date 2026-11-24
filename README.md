@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AmigoPet Front-end
 
 Front-end React, TypeScript e Vite para a API `amigopet-backend`.
@@ -47,3 +48,6 @@ npm run build
 ```
 
 O back-end permite CORS somente para `http://localhost:5173`, com os métodos HTTP necessários e os cabeçalhos `Authorization`, `Content-Type` e `Accept`.
+=======
+# amigopet-frontend
+>>>>>>> origin/main
