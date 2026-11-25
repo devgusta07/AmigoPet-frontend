@@ -1,53 +1,87 @@
-<<<<<<< HEAD
-# AmigoPet Front-end
+# 🐾 AmigoPet — Frontend
 
-Front-end React, TypeScript e Vite para a API `amigopet-backend`.
+Interface web do AmigoPet, uma aplicação desenvolvida com o objetivo de oferecer um ecossistema administrativo para um pet shop.
 
-## Executar localmente
+O frontend permite que usuários e administradores interajam com as funcionalidades disponibilizadas pelo backend, respeitando os níveis de acesso de cada perfil.
 
-Na pasta `amigopet-frontend`:
+**Acesse a aplicação:** https://amigopet-frontend.vercel.app/login
 
-```powershell
-npm install
-npm run dev
-```
+## Tecnologias utilizadas
 
-O Vite ficará disponível em `http://localhost:5173`.
-
-Crie um arquivo `.env` com:
-
-```env
-VITE_API_URL=http://localhost:8080
-```
-
-Inicie o banco e o back-end na pasta `amigopet-backend`:
-
-```powershell
-docker compose up -d
-.\mvnw.cmd spring-boot:run
-```
+- React
+- Vite
+- JavaScript
 
 ## Funcionalidades
 
-- Landing page pública com serviços, login e cadastro.
-- Login com JWT.
-- Sessão protegida por `sessionStorage`.
-- Perfil e alteração de senha.
-- Cadastro e remoção de animais.
-- Consulta, criação e cancelamento de agendamentos.
-- Solicitação e redefinição de senha por token.
-- Área administrativa protegida pela role `ADMIN`.
+- Interface de autenticação e cadastro.
+- Login de usuários.
+- Recuperação de senha.
+- Área de usuário.
+- Área administrativa com acesso conforme as permissões do usuário.
+- Integração com API REST.
+- Gerenciamento de animais.
 
-O token JWT do back-end expira em cinco minutos e não existe refresh token. Por isso, o front-end verifica o campo `exp`, remove tokens expirados e encerra a sessão após `401`. O `sessionStorage` evita persistência entre sessões do navegador, mas continua acessível ao JavaScript da página; uma política CSP e uma futura migração para cookies `HttpOnly`, `Secure` e `SameSite` são recomendadas para maior proteção contra XSS.
+## Integração com Backend
 
-## Validação
+O frontend consome a API REST desenvolvida em Java e Spring Boot.
 
-```powershell
-npm run lint
-npm run build
+**Repositório do Backend:** https://github.com/devgusta07/AmigoPet-Backend
+
+**API em produção:** https://amigopet-backend-uua0.onrender.com
+
+## Executando localmente
+
+É possível executar o frontend localmente utilizando o backend já publicado.
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/devgusta07/amigopet-frontend.git
 ```
 
-O back-end permite CORS somente para `http://localhost:5173`, com os métodos HTTP necessários e os cabeçalhos `Authorization`, `Content-Type` e `Accept`.
-=======
-# amigopet-frontend
->>>>>>> origin/main
+### 2. Entre na pasta do projeto
+
+```bash
+cd amigopet-frontend
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Configure a variável de ambiente
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+VITE_API_URL=https://amigopet-backend-uua0.onrender.com
+```
+
+Essa variável define o endereço da API que será consumida pelo frontend.
+
+### 5. Execute a aplicação
+
+```bash
+npm run dev
+```
+
+O Vite disponibilizará o endereço local da aplicação no terminal.
+
+## Deploy
+
+O frontend está hospedado na Vercel, com integração ao GitHub para publicação das atualizações.
+
+## Desenvolvimento
+
+O frontend foi desenvolvido integralmente com auxílio do GitHub Copilot, utilizado como ferramenta de apoio na implementação da interface.
+
+O processo de integração e publicação da aplicação também contou com auxílio intensivo do ChatGPT.
+
+A utilização dessas ferramentas fez parte do processo de desenvolvimento e aprendizado, incluindo integração com API, configuração de ambientes e resolução de problemas de comunicação entre frontend e backend.
+
+---
+
+Desenvolvido como parte do projeto AmigoPet.
