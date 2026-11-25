@@ -4,7 +4,7 @@ Interface web do AmigoPet, uma aplicação desenvolvida com o objetivo de oferec
 
 O frontend permite que usuários e administradores interajam com as funcionalidades disponibilizadas pelo backend, respeitando os níveis de acesso de cada perfil.
 
-**Acesse a aplicação:** https://amigopet-frontend.vercel.app/login
+**Acesse a aplicação:** https://amigopet-frontend.vercel.app/
 
 ## Tecnologias utilizadas
 
